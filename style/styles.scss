@@ -137,6 +137,7 @@ body {
         position: relative;
         width: 100%;
     }
+    /* --MAINPAGE----MAINPAGE----MAINPAGE-- */
     &_mainpage{
         margin-top: 90px;
         position: relative;
@@ -144,27 +145,28 @@ body {
         width: 100%;
         align-items: center;
         &_info{
+            align-self: flex-end;
             padding: 0px 10px;
             position: relative;
             flex: 1 1 40%;
             display: flex;
             flex-direction: column;
             &_h{
-                position: relative;
+                position: absolute;
+                top: -450%;
                 left: 35%;
                 font-weight: 700;
                 font-size: 50px;
                 line-height: 106%;
                 text-transform: uppercase;
                 z-index: 10;
-                margin-bottom: 100px;
             }
             &_text{
                 font-weight: 400;
                 font-size: 30px;
                 line-height: 106%;
                 text-transform: uppercase;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
         }
         &_box{
@@ -206,6 +208,34 @@ body {
                 top: -100%;
                 left: 90%;
             }
+            &_3{
+                background-color: #000000;
+                position: absolute;
+                transform-origin: top left;
+                transform: rotate(90deg);
+                width: 2px;
+                height: 100px;
+                left: 0%;
+                top: 90%;
+            }
+            &_4{
+                background-color: #000000;
+                position: absolute;
+                width: 2px;
+                height: 550px;
+                left: -102px;
+                top: 90%;
+            }
+            &_5{
+                background-color: #000000;
+                position: absolute;
+                transform-origin: top left;
+                transform: rotate(90deg);
+                width: 2px;
+                height: 100px;
+                left: 0%;
+                top: 936px;
+            }
         }
         
     }
@@ -213,10 +243,25 @@ body {
         &_mainpage{
             &_info{
                 &_h{
-                    font-size: 30px;
+                    left: 30%;
+                    font-size: 40px;
                 }
                 &_text{
+                    width: 200px;
                     font-size: 20px;
+                    transform: translateY(20px);
+                }
+            }
+        }  
+    }
+    @media (max-width: 1250px){
+        &_mainpage{
+            &_box{
+                &_4{
+                    display: none;
+                }
+                &_5{
+                    display: none;
                 }
             }
         }  
@@ -227,7 +272,9 @@ body {
             margin-top: 30px;
             align-items: baseline;
             &_info{
+                align-self: flex-start;
                 &_h{
+                    position: relative;
                     margin-top: 13px;
                     margin-bottom: 0px;
                     width: 180px;
@@ -257,4 +304,54 @@ body {
             }
         }  
     }
+    /* --MAINPAGE----MAINPAGE----MAINPAGE-- */
+
+    /* --STEPS----STEPS----STEPS-- */
+    &_steps{
+        position: relative;
+        margin-top: 300px;
+        &_info{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 106%;
+            text-align: center;
+        }
+        &_box{
+            margin-top: 78px;
+            display: flex;
+            align-items: center;
+            & > img{
+                width: 100%;
+                padding: 2px;
+                flex: 1;
+            }
+        }
+    }
+    @media (max-width: 1230px){
+        &_steps{
+            &_box{
+                & > img:nth-child(2n){
+                    width: 100px;
+                }
+            }
+        }  
+    }
+    @media (max-width: 1040px){
+        &_steps{
+            &_box{
+                & > img{
+                    width: 50px;
+                }
+                & > img:nth-child(2n){
+                    width: 50px;
+                }
+            }
+        }  
+    }
+    @media (max-width: 768px){
+        &_steps{
+            display: none;
+        }  
+    }
+    /* --STEPS----STEPS----STEPS-- */
 }
