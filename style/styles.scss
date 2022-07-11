@@ -354,4 +354,222 @@ body {
         }  
     }
     /* --STEPS----STEPS----STEPS-- */
+
+    /* --FORM----FORM----FORM-- */
+    &_form{
+        position: relative;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_h{
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 68px;
+        }
+        &_box{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+            &_content{
+                border: #000000 2px solid;
+                flex: 0 1 77%;
+                margin-top: 33px;
+                margin-right: 26px;
+                &_1{
+                    background-color: #000000;
+                    position: absolute;
+                    width: 2px;
+                    height: 100px;
+                    top: -340px;
+                    left: 109.6%;
+                    transform-origin: top left;
+                    transform: rotate(90deg);
+                }
+                &_2{
+                    background-color: #000000;
+                    position: absolute;
+                    width: 2px;
+                    height: 442px;
+                    top: -340px;
+                    left: 109.6%;
+                    transform-origin: top left;
+                }
+                &_3{
+                    background-color: #000000;
+                    position: absolute;
+                    width: 2px;
+                    height: 300px;
+                    top: 100px;
+                    left: 109.6%;
+                    transform-origin: top left;
+                    transform: rotate(90deg);
+                }
+                &_img{
+                    width: 100%;
+                    padding: 65px;
+                    border: #000000 2px solid;
+                    transform: translate(29px, -36px);
+                    background: url('../src/form/Photo.png') right / cover no-repeat;
+                }
+                &_form{
+                    display: flex;
+                    align-items: center;
+                    width: 354px;
+                    flex-direction: column;
+                    &_input{
+                        width: 100%;
+                        font-size: 15px;
+                        line-height: 106%;
+                        padding: 14px 30px 14px 30px;
+                        border-radius: 22px;
+                        background-color: #ffffff;
+                        margin-bottom: 24px;
+                        outline: none;
+                        &:last-child{
+                            margin-bottom: 15px;
+                        }
+                        &.error{
+                            border: #000000 1px solid;
+                        }
+                    }
+                    &_textarea{
+                        font-family: inherit;
+                        font-weight: inherit;
+                        width: 100%;
+                        height: 125px;
+                        font-size: 15px;
+                        line-height: 106%;
+                        padding: 14px 30px 14px 30px;
+                        border-radius: 22px;
+                        background-color: #ffffff;
+                        outline: none;
+                        margin-bottom: 29px;
+                        resize: none;
+                        &.error{
+                            border: #000000 1px solid;
+                        }
+                    }
+                    &_button{
+                        font-family: inherit;
+                        font-weight: inherit;
+                        width: fit-content;
+                        color: #ffffff;
+                        background-color: #000000;
+                        padding: 14px 44px;
+                        font-size: 15px;
+                        line-height: 106%;
+                        border-radius: 22px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px){
+        &_form{
+            &_h{
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box{
+                &_content{
+                    flex: 0 1 100%;
+                    margin-top: 33px;
+                    margin-left: 26px;
+                    margin-right: 0px;
+                    &_1{
+                        display: none;
+                    }
+                    &_2{
+                        display: none;
+                    }
+                    &_3{
+                        left: 100%;
+                        transform: rotate(-90deg);
+                    }
+                    &_img{
+                        padding: 57px 38px;
+                        transform: translate(-29px, -36px);
+                    }
+                    &_form{
+                        width: 265px;
+                        &_input{
+                            padding: 10px 20px;
+                            border-radius: 22px;
+                            margin-bottom: 17px;
+                            &:last-child{
+                                margin-bottom: 12px;
+                            }
+                        }
+                        &_textarea{
+                            height: 95px;
+                            padding: 10px 20px;
+                            margin-bottom: 20px;
+                        }
+                        &_button{
+                            padding: 10px 38px;
+                            
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 426px){
+        &_form{
+            &_box{
+                &_content{
+                    &_img{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &_form{
+                        width: 265px;
+                        &_input{
+                            padding: 10px 20px;
+                            border-radius: 22px;
+                            margin-bottom: 17px;
+                            &:last-child{
+                                margin-bottom: 12px;
+                            }
+                        }
+                        &_textarea{
+                            height: 95px;
+                            padding: 10px 20px;
+                            margin-bottom: 20px;
+                        }
+                        &_button{
+                            padding: 10px 38px;
+                            
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 1250px){
+        &_form{
+            &_box{
+                &_content{
+                    &_1{
+                        display: none;
+                    }
+                    &_2{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    /* --FORM----FORM----FORM-- */
 }
