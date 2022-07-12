@@ -609,7 +609,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 300px;
         &_h {
             width: fit-content;
             font-weight: 700;
@@ -633,6 +632,7 @@ body {
                 margin-right: 28px;
                 & > img{
                     width: 100%;
+                    border: #000000 2px solid;
                     transform: translate(30px, -35px);
                 }
                 &_1{
@@ -716,6 +716,20 @@ body {
             }
         }
     }
+    @media (max-width: 1000px){
+        &_advantage {
+            &_box {
+                &_content{
+                    &_h{
+                        font-size: 20px;
+                    }
+                    &_text{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }         
+    }
     @media (max-width: 768px){
         &_advantage {
             margin-top: 50px;
@@ -774,4 +788,369 @@ body {
         }         
     }
     /* --ADVANTAGE----ADVANTAGE----ADVANTAGE-- */
+
+    /* --ADVANTAGE2----ADVANTAGE2----ADVANTAGE2-- */
+    &_advantage2 {
+        width: 100%;
+        position: relative;
+        margin-top: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_h {
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 90px;
+        }
+        &_box {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            &_img{
+                position: relative;
+                flex: 0 1 45%;
+                border: #000000 2px solid;
+                margin-bottom: 32px;
+                margin-left: 28px;
+                & > img{
+                    border: #000000 2px solid;
+                    width: 100%;
+                    transform: translate(-30px, 35px);
+                }
+                &_1{
+                    position: absolute;
+                    top: 100px;
+                    height: 100px;
+                    width: 2px;
+                    right: -2px;
+                    background-color: #000000;
+                    transform-origin: top left;
+                    transform: rotate(-90deg);
+                }
+                &_2{
+                    position: absolute;
+                    top: -300px;
+                    height: 400px;
+                    width: 2px;
+                    right: -100px;
+                    background-color: #000000;
+                }
+                &_3{
+                    position: absolute;
+                    top: -300px;
+                    height: 142px;
+                    width: 2px;
+                    right: 40px;
+                    background-color: #000000;
+                    transform-origin: top left;
+                    transform: rotate(-90deg);
+                }
+            }
+            &_content{
+                flex: 0 1 55%;
+                min-width: 0;   /* Обезательно для слайдера в flex */
+                position: relative;
+                margin-right: 70px;
+                &_h{
+                    font-size: 25px;
+                    line-height: 106%;
+                    text-transform: uppercase;
+                    margin-bottom: 43px;
+                    text-align: right;
+                }
+                &_text{
+                    font-size: 22px;
+                    line-height: 106%;
+                    margin-bottom: 67px;
+                    text-align: right;
+                }
+                &_box{
+                    position: relative;
+                }
+                &_slider{
+                    display: flex;
+                    justify-content: space-between;
+                    z-index: 2;
+                    position: relative;
+                    &_slide{
+                        min-width: 0;
+                        flex: 0 1 30%;
+                        border: #000000 2px solid;
+                        width: 100%;
+                    }
+                    &_back{
+                        z-index: 1;
+                        position: absolute;
+                        width: 100%;
+                        top: -5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        & > img{
+                            flex: 0 1 30%;
+                            min-width: 0;
+                            margin-top: 25px;
+                            &:nth-child(2n){
+                                margin-top: -50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1250px){
+        &_advantage2 {
+            &_box {
+                &_img{
+                    &_2{
+                       display: none;
+                    }
+                    &_3{
+                        display: none;
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 1000px){
+        &_advantage2 {
+            &_box {
+                &_content{
+                    &_h{
+                        font-size: 20px;
+                    }
+                    &_text{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 768px){
+        &_advantage2 {
+            margin-top: 100px;
+            &_h {
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box {
+                flex-direction: column-reverse;
+                &_img{
+                    
+                }
+                &_content{
+                    flex: 0 1 100%;
+                    margin-right: 0px;
+                    &_h{
+                        font-size: 16px;
+                        margin-bottom: 12px;
+                        padding: 0px 20px;
+                        text-align: left;
+                    }
+                    &_text{
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                        padding: 0px 20px;
+                        text-align: left;
+                    }
+                    &_box{
+                        justify-content: center;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                    }
+                    &_slider{
+                        display: none;
+                        &_back{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    /* --ADVANTAGE2----ADVANTAGE2----ADVANTAGE2-- */
+
+    /* --ADVANTAGE3----ADVANTAGE3----ADVANTAGE3-- */
+    &_advantage3 {
+        width: 100%;
+        position: relative;
+        margin-top: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_h {
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 90px;
+        }
+        &_box {
+            width: 100%;
+            position: relative;
+            display: flex;
+            &_img{
+                position: relative;
+                flex: 0 1 30.6%;
+                border: #000000 2px solid;
+                margin-bottom: 32px;
+                margin-right: 28px;
+                & > img{
+                    border: #000000 2px solid;
+                    width: 100%;
+                    transform: translate(30px, 35px);
+                }
+                &_1{
+                    position: absolute;
+                    top: -250px;
+                    height: 250px;
+                    width: 2px;
+                    left: 10%;
+                    background-color: #000000;
+                }
+            }
+            &_content{
+                flex: 0 1 69.4%;
+                min-width: 0;   /* Обезательно для слайдера в flex */
+                position: relative;
+                margin-left: 70px;
+                &_h{
+                    font-size: 25px;
+                    line-height: 106%;
+                    text-transform: uppercase;
+                    margin-bottom: 43px;
+                }
+                &_text{
+                    font-size: 22px;
+                    line-height: 106%;
+                    margin-bottom: 20px;
+                }
+                &_list{
+                    margin-bottom: 80px;
+                    padding-left: 30px;
+                    &_item{
+                        font-size: 22px;
+                        line-height: 106%;
+                        list-style:disc;
+                    }
+                }
+                &_box{
+                    position: relative;
+                }
+                &_slider{
+                    display: flex;
+                    justify-content: space-between;
+                    z-index: 2;
+                    position: relative;
+                    &_slide{
+                        min-width: 0;
+                        flex: 0 1 23%;
+                        border: #000000 2px solid;
+                        width: 100%;
+                    }
+                    &_back{
+                        z-index: 1;
+                        position: absolute;
+                        width: 100%;
+                        top: -5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        & > img{
+                            flex: 0 1 25%;
+                            min-width: 0;
+                            margin-top: 25px;
+                            &:nth-child(2n){
+                                margin-top: -50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        &_advantage3 {
+            &_box {
+                &_content{
+                    &_h{
+                        font-size: 20px;
+                    }
+                    &_text{
+                        font-size: 18px;
+                    }
+                    &_list{
+                        &_item{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 768px){
+        &_advantage3 {
+            margin-top: 43px;
+            &_h {
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box {
+                flex-direction: column-reverse;
+                &_img{
+                    &_1{
+                        display: none;
+                    }
+                }
+                &_content{
+                    flex: 0 1 100%;
+                    margin-left: 0px;
+                    &_h{
+                        font-size: 16px;
+                        margin-bottom: 12px;
+                        padding: 0px 20px;
+                    }
+                    &_text{
+                        font-size: 15px;
+                        margin-bottom: 20px;
+                        padding: 0px 20px;
+                    }
+                    &_list{
+                        margin-bottom: 15px;
+                        &_item{
+                            font-size: 15px;
+                        }
+                    }
+                    &_box{
+                        justify-content: center;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                    }
+                    &_slider{
+                        display: none;
+                        &_back{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    /* --ADVANTAGE3----ADVANTAGE3----ADVANTAGE3-- */
 }
