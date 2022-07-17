@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@700&display=swap');
 /* Обнуление */
 *,
 *::before,
@@ -1153,4 +1154,174 @@ body {
         }         
     }
     /* --ADVANTAGE3----ADVANTAGE3----ADVANTAGE3-- */
+
+    /* --TRUST----TRUST----TRUST-- */
+    &_trust {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 170px;
+        &_h {
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 86px;
+        }
+        &_box {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &_item {
+                flex: 1;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                &:nth-child(2){
+                    flex: 2;
+                }
+                &_h {
+                    font-weight: 700;
+                    font-size:100px;
+                    margin: 0;
+                    line-height: 106%;
+                    text-align: center;  
+                    color: #fff;
+                    font-family: 'Albert Sans', sans-serif;
+                    -webkit-text-fill-color: white;
+                    -webkit-text-stroke: 2px #000000;
+                    &>span{
+                        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    }
+                }
+                &_info {
+                    margin-top: 18px;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 106%;
+                    text-align: center;           
+                    color: #000000;
+                }
+            }
+            &_1{
+                position: absolute;
+                top: 30%;
+                height: 100px;
+                width: 2px;
+                left: 100%;
+                transform-origin: top left;
+                transform: rotate(-90deg);
+                background-color: #000000;
+            }
+            &_2{
+                position: absolute;
+                top: 30%;
+                height: 460px;
+                width: 2px;
+                right: -102px;
+                transform-origin: top left;
+                transform: rotate(180deg);
+                background-color: #000000;
+            }
+            &_3{
+                position: absolute;
+                top: -410px;
+                height: 100px;
+                width: 2px;
+                left: 100%;
+                transform-origin: top left;
+                transform: rotate(-90deg);
+                background-color: #000000;
+            }
+
+        }
+    }
+    @media (max-width: 1250px){
+        &_trust {
+            &_box {
+                &_1{
+                    display: none;
+                }
+                &_2{
+                    display: none;
+                }
+                &_3{
+                    display: none;
+                }
+    
+            }
+        }      
+    }
+    @media (max-width: 1000px){
+        &_trust {
+            &_box {
+                &_item {
+                    flex: 1;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    &:nth-child(2){
+                        flex: 2;
+                    }
+                    &_h {
+                        font-size:80px;
+                    }
+                }
+    
+            }
+        }        
+    }
+    @media (max-width: 768px){
+        &_trust {
+            margin-top: 35px;
+            &_h {
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box {
+                flex-direction: column;
+                &_item {
+                    flex: 1;
+                    margin-bottom: 60px;
+                    &:nth-child(2){
+                        flex: 1;
+                    }
+                    &_info {
+                        margin-top: 10px;
+                        font-size: 15px;
+                    }
+                }
+                &_1{
+                    display: block;
+                    position: absolute;
+                    top: 23%;
+                    height: 50px;
+                    width: 2px;
+                    left: 50%;
+                    transform-origin: top left;
+                    transform: rotate(0deg);
+                    background-color: #000000;
+                }
+                &_2{
+                    display: block;
+                    position: absolute;
+                    top: 59%;
+                    height: 50px;
+                    width: 2px;
+                    left: 50%;
+                    transform-origin: top left;
+                    transform: rotate(0deg);
+                    background-color: #000000;
+                }
+            }
+        }    
+    }
+    /* --TRUST----TRUST----TRUST-- */
 }
