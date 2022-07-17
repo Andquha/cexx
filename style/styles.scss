@@ -1539,4 +1539,84 @@ body {
         }
     }
     /* --PRODUCTION----PRODUCTION----PRODUCTION-- */
+
+    /* --PARTNERS----PARTNERS----PARTNERS-- */
+    &_partners {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 140px;
+        &_h{
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 86px;
+        }
+        &_box{
+            width: 70%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &_item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                padding: 0px 20px;
+                max-width: 200px;
+                    min-width: 100px;
+                &>img{
+                    width: 100%;
+                }
+            }
+            &_1{
+                position: absolute;
+                top: 50%;
+                height: 75px;
+                width: 2px;
+                right: 0%;
+                transform-origin: top left;
+                transform: rotate(-90deg);
+                background-color: #000000;
+            }
+            &_2{
+                position: absolute;
+                top: 50%;
+                height: 370px;
+                width: 2px;
+                right: -77px;
+                transform-origin: top left;
+                transform: rotate(180deg);
+                background-color: #000000;
+            }
+        }
+    }
+    @media (max-width: 768px){
+        &_partners {
+            margin-top: 60px;
+            &_h{
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box{
+                width: 100%;
+                &_1{
+                    display: none;
+                }
+                &_2{
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    /* --PARTNERS----PARTNERS----PARTNERS-- */
 }
