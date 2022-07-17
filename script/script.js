@@ -20,45 +20,6 @@ $(document).ready(function () {
         }
       ]
     });
-    // $('.ourwork_slides').slick({
-    //   adaptiveHeight: true,
-    //   slidesToShow: 1,
-    //   slidestoScroll: 1,
-    //   speed: 1000,
-    //   easing: 'ease',
-    //   infinite: true,
-    //   autoplay: true,
-    //   autoplaySpeed: 10000,
-    //   variableWidth: true,
-    //   swipe: true,
-    //   centerMode: true,
-    //   focusOnSelect: true,
-    //   nextArrow: '.ourwork.arrow_right',
-    //   prevArrow: '.ourwork.arrow_left',
-    //   asNavFor: '.ourwork_slides_focus',
-    // });
-    // $('.ourwork_slides_focus').slick({
-    //   adaptiveHeight: true,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   arrows: false,
-    //   fade: true,
-    //   asNavFor: '.ourwork_slides',
-    // });
-    // $('.reviews_slides').slick({
-    //   adaptiveHeight: true,
-    //   slidesToShow: 1,
-    //   slidestoScroll: 1,
-    //   speed: 1000,
-    //   easing: 'ease',
-    //   infinite: true,
-    //   autoplay: true,
-    //   autoplaySpeed: 5000,
-    //   swipe: true,
-    //   nextArrow: '.reviews.arrow_right',
-    //   prevArrow: '.reviews.arrow_left',
-  
-    // });
   });
 
 
