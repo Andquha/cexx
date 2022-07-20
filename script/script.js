@@ -83,3 +83,26 @@ function emailTest(item) {
     console.log(item.value)
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(item.value);
 }
+
+// Кнопка меню
+let button = $('.header_menu_button_img');
+
+button.on('click', function(e){
+    e.preventDefault();
+    if(button.hasClass('active')){
+        close();
+    }else{
+        open();
+    }
+});
+
+function close(){
+    button.removeClass('active');
+    $('body').removeClass('active');
+    $('.header_menu_list').removeClass('active');
+};
+function open(){
+    button.addClass('active');
+    $('body').addClass('active');
+    $('.header_menu_list').addClass('active');
+};
