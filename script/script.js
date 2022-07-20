@@ -106,3 +106,19 @@ function open(){
     $('body').addClass('active');
     $('.header_menu_list').addClass('active');
 };
+
+// Кнопки Faq
+let faq = $('.main_faq_box_question_item');
+
+faq.on('click', function(e){
+    e.preventDefault();
+    if($(this).hasClass('active')){
+        faq.removeClass('active');
+        faq.children().removeClass('active');
+    }else{
+        faq.removeClass('active');
+        faq.children().removeClass('active');
+        $(this).addClass('active');
+        $(this).children().addClass('active');
+    }
+});

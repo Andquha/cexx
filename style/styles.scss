@@ -1736,6 +1736,24 @@ body {
                 transform: rotate(180deg);
                 background-color: #000000;
             }
+            &_3{
+                position: absolute;
+                top: 50%;
+                height: 75px;
+                width: 2px;
+                left: 0%;
+                transform-origin: top left;
+                transform: rotate(90deg);
+                background-color: #000000;
+            }
+            &_4{
+                position: absolute;
+                top: 50%;
+                height: 340px;
+                width: 2px;
+                left: -77px;
+                background-color: #000000;
+            }
         }
     }
     @media (max-width: 768px){
@@ -1754,11 +1772,153 @@ body {
                 &_2{
                     display: none;
                 }
+                &_3{
+                    display: none;
+                }
+                &_4{
+                    display: none;
+                }
             }
             
         }
     }
     /* --PARTNERS----PARTNERS----PARTNERS-- */
+
+    /* --FAQ----FAQ----FAQ-- */
+    &_faq{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        margin-top: 150px;
+        &_h{
+            align-self: center;
+            width: fit-content;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 106%;
+            text-transform: uppercase;
+            color: #ffffff;
+            padding: 14px 28px;
+            background-color: #000000;
+            margin-bottom: 86px;
+        }
+        &_box{
+            display: flex;
+            align-items: flex-start;
+            &_img{
+                z-index: 5;
+                flex: 1;
+                border: #000000 2px solid;
+                margin-left: 30px;
+                margin-bottom: 30px;
+                width: 100%;
+                &>img{
+                    width: 100%;
+                    border: #000000 2px solid;
+                    transform: translate(-30px, 30px);
+                }
+            }
+            &_question{
+                flex: 1;
+                width: 100%;
+                padding: 100px 0px 0px 68px;
+                &_item{
+                    width: 100%;
+                    position: relative;
+                    padding-left: 25px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 4px;
+                        height: 25px;
+                        background-color: #000000;
+                        left: 0;
+                        top: -3px;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        border-radius: 2px;
+                        width: 4px;
+                        height: 25px;
+                        background-color: #000000;
+                        left: 0;
+                        top: -3px;
+                        transform: rotate(90deg);
+                        cursor: pointer;
+                        transition: all 0.5s ease;
+                    }
+                    &.active{
+                        &::after{
+                            top: 10px;
+                            transform: rotate(90deg);
+                            height: 0px;
+                        }
+                        &::before{
+                            transform: rotate(90deg);
+                        }
+
+                    }
+                    &_h{
+                        font-size: 20px;
+                        line-height: 106%;
+                        margin-bottom: 68px;
+                        cursor: pointer;
+                        &.active{
+                            margin-bottom: 16px;
+                        }
+                    }
+                    &_text{
+                        font-size: 16px;
+                        line-height: 130%;
+                        margin-bottom: 35px;
+                        display: none;
+                        &.active{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px){
+        &_faq{
+            margin-top: 40px;
+            align-items: flex-start;
+            &_h{
+                font-size: 16px;
+                padding: 8px 23px;
+                margin-bottom: 38px;
+            }
+            &_box{
+                &_img{
+                    display: none;
+                }
+                &_question{
+                    padding: 0px 20px;
+                    &_item{
+                        &_h{
+                            font-size: 15px;
+                            margin-bottom: 27px;
+                            cursor: pointer;
+                            &.active{
+                                margin-bottom: 10px;
+                            }
+                        }
+                        &_text{
+                            font-size: 14px;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* --FAQ----FAQ----FAQ-- */
 }
 
 /* --FOOTER----FOOTER----FOOTER-- */
@@ -1771,12 +1931,30 @@ body {
         width: 100%;
         &_box{
             border-right: #000000 2px solid;
-            border-top:  #000000 2px solid;
             padding: 65px 145px;
             position: relative;
             width: 100%;
             display: flex;
             justify-content: space-between;
+            &_1{
+                position: absolute;
+                top: 0;
+                height: 2px;
+                width: 90%;
+                right: -2px;
+                background-color: #000000;
+            }
+            &_2{
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                height: 330px;
+                width: 2px;
+                left: 10%;
+                transform-origin: top right;
+                transform: rotate(180deg);
+                background-color: #000000; 
+            }
             &_logo{
                 flex: 1;
                 display: flex;
@@ -1821,6 +1999,12 @@ body {
                     font-weight: 500;
                     font-size: 12px;
                     line-height: 106%;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #ffffff;
+                        border: 2px #000000 solid;
+                        color: #000000;
+                    }
                 }
                 &_box{
                     position: relative;
@@ -1840,5 +2024,135 @@ body {
             }
         }
     }
+}
+@media (max-width: 1206px){
+    .footer {
+        &_container{
+            &_box{
+                padding: 65px 10%;
+                &_logo{
+                    flex: 0.7;
+                }
+                &_schedule{
+                    flex: 1;
+                }
+                &_contacts{
+                    flex: 1;
+                }
+                &_social{
+                    flex: 0.7;
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 992px){
+    .footer {
+        &_container{
+            &_box{
+                padding: 65px 10px;
+                &_logo{
+                    flex: 0.7;
+                }
+                &_schedule{
+                    flex: 1;
+                    &_text{
+                        font-size: 18px;
+                    }
+                }
+                &_contacts{
+                    flex: 1;
+                    &_text{
+                        font-size: 18px;
+                    }
+                }
+                &_social{
+                    flex: 0.7;
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 768px){
+    .footer {
+        margin-top: 50px;
+        &_container{
+            &_box{
+                border-right: none;
+                padding: 65px 10px;
+                &_1{
+                    display: none;
+                }
+                &_2{
+                    display: none;
+                }
+                &_logo{
+                    flex: 1;
+                }
+                &_contacts{
+                    flex: 1;
+                }
+                &_social{
+                    position: absolute;
+                    top: 0;
+                    left: -10px;
+                    width: 100vw;
+                    &_button{
+                        position: absolute;
+                        top: -3px;
+                        width: 100%;
+                        border-radius: 0px;
+                        text-align: center;
+                        &:hover{
+                            background-color: #000000;
+                            border: none;
+                            color: #ffffff;
+                        }
+                    }
+                    &_box{
+                        position: absolute;
+                        bottom: -210px;
+                    }
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 645px){
+    .footer {
+        &_container{
+            &_box{
+                padding: 65px 10px;
+                &_logo{
+                    flex: 1;
+                    &>img{
+                        width: 70%;
+                    }
+                    &_by{
+                        font-size: 10px;
+                    }
+                }
+                &_schedule{
+                    flex: 1;
+                    &_text{
+                        font-size: 10px;
+                        line-height: 150%;
+                    }
+                }
+                &_contacts{
+                    flex: 1;
+                    &_text{
+                        font-size: 10px;
+                        line-height: 150%;
+                    }
+                }
+                &_social{
+                    &_box{
+                        bottom: -180px;
+                    }
+                }
+            }
+        }
+    } 
 }
 /* --FOOTER----FOOTER----FOOTER-- */
