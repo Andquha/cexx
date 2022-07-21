@@ -790,6 +790,214 @@ body {
     }
     /* --FORM----FORM----FORM-- */
 
+    /* --FORM----FORM----FORM-- */
+    &_form{
+        &_box{
+            &_show{
+                backdrop-filter: blur(2px);
+                background-color: #00000081;
+                display: none;
+                height: 100vh;
+                width: 100%;
+                position: relative;
+                padding: 0px 20px;
+                &.active{
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 30;
+                }
+                &_container{
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    width: 100%;
+                }
+                &_content{
+                    border: #fff 2px solid;
+                    flex: 0 1 77%;
+                    height: fit-content;
+                    margin-top: 33px;
+                    margin-right: 26px;
+                    &_img{
+                        width: 100%;
+                        padding: 65px;
+                        border: #fff 2px solid;
+                        transform: translate(29px, -36px);
+                        background: url('../src/form/Photo2.png') right / cover no-repeat;
+                        &_close{
+                            position: absolute;
+                            top: 35px;
+                            right: 35px;
+                            cursor: pointer;
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                width: 6px;
+                                height: 45px;
+                                border-radius: 3px;
+                                background-color: #ffffff;
+                                top: -31px;
+                                transform-origin: bottom left;
+                                transform: translateX(-15px) rotate(45deg);
+                            }
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                width: 6px;
+                                height: 45px;
+                                border-radius: 3px;
+                                background-color: #ffffff;
+                                bottom: -31px;
+                                transform-origin: top left;
+                                transform: translateX(-15px) rotate(-45deg);
+                            }
+                        }
+                    }
+                    &_form{
+                        display: flex;
+                        align-items: center;
+                        width: 354px;
+                        flex-direction: column;
+                        &_input{
+                            width: 100%;
+                            font-size: 15px;
+                            line-height: 106%;
+                            padding: 14px 30px 14px 30px;
+                            border-radius: 22px;
+                            background-color: #ffffff;
+                            margin-bottom: 24px;
+                            outline: none;
+                            &:last-child{
+                                margin-bottom: 15px;
+                            }
+                            &.error{
+                                border: #000000 1px solid;
+                            }
+                        }
+                        &_textarea{
+                            font-family: inherit;
+                            font-weight: inherit;
+                            width: 100%;
+                            height: 125px;
+                            font-size: 15px;
+                            line-height: 106%;
+                            padding: 14px 30px 14px 30px;
+                            border-radius: 22px;
+                            background-color: #ffffff;
+                            outline: none;
+                            margin-bottom: 29px;
+                            resize: none;
+                            &.error{
+                                border: #000000 1px solid;
+                            }
+                        }
+                        &_button{
+                            font-family: inherit;
+                            font-weight: inherit;
+                            width: fit-content;
+                            color: #ffffff;
+                            background-color: #000000;
+                            padding: 14px 44px;
+                            font-size: 15px;
+                            line-height: 106%;
+                            border-radius: 22px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 768px){
+        &_form{
+            &_box{
+                &_show{
+                    &_content{
+                        flex: 0 1 100%;
+                        margin-top: 33px;
+                        margin-left: 26px;
+                        margin-right: 0px;
+                        &_img{
+                            padding: 57px 38px;
+                            transform: translate(-29px, -36px);
+                        }
+                        &_form{
+                            width: 265px;
+                            &_input{
+                                padding: 10px 20px;
+                                border-radius: 22px;
+                                margin-bottom: 17px;
+                                &:last-child{
+                                    margin-bottom: 12px;
+                                }
+                            }
+                            &_textarea{
+                                height: 95px;
+                                padding: 10px 20px;
+                                margin-bottom: 20px;
+                            }
+                            &_button{
+                                padding: 10px 38px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 426px){
+        &_form{
+            &_box{
+                &_show{
+                    &_content{
+                        &_img{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        &_form{
+                            width: 265px;
+                            &_input{
+                                padding: 10px 20px;
+                                border-radius: 22px;
+                                margin-bottom: 17px;
+                                &:last-child{
+                                    margin-bottom: 12px;
+                                }
+                            }
+                            &_textarea{
+                                height: 95px;
+                                padding: 10px 20px;
+                                margin-bottom: 20px;
+                            }
+                            &_button{
+                                padding: 10px 38px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 376px){
+        &_form{
+            &_box{
+                &_show{
+                    &_content{
+                        &_form{
+                            width: 225px;
+                        }
+                    }
+                }
+            }
+        }         
+    }
+    /* --FORM----FORM----FORM-- */
+
     /* --ADVANTAGE----ADVANTAGE----ADVANTAGE-- */
     &_advantage {
         width: 100%;

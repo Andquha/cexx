@@ -24,61 +24,85 @@ $(document).ready(function () {
 
 
 
-// const PageForm = $('.main_form_box_content_form');
-// // const close = $('');
+const form = $('#form');
+const formshow = $('#formshow');
 
-// function open(e) {
-//   e.preventDefault();
-//   PageForm.addClass('active');
-//   $('body').addClass('active');
-// }
-// function close(e) {
-//     e.preventDefault();
-//     PageForm.removeClass('active');
-//     $('body').removeClass('active');
-// }
-
-$('.main_form_box_content_form').submit(function(event){
+form.submit(function(event){
     event.preventDefault();
-    let Form = $(this);
-    let errors = formValidate($(this));
-    let error = errors[0];
-    let mail = errors[1];
-    console.log(errors);
-    if(error === 0){
-        if(mail === 0){
-            Form.addClass('sending');
-            $('body').addClass('active');
-            $.ajax({
-                type: $(this).attr('method'),
-                url: $(this).attr('action'),
-                data: new FormData(this),
-                contentType: false,
-                cache: false,
-                processData: false,
-    
-                success: function(e){
-                    $('input').val('');
-                    $('textarea').val('');
-                    alert('Спасибо! Письмо отправленно')
-                    Form.removeClass('sending');
-                    Form.removeClass('active');
-                    document.body.classList.remove("active");
-                }
-            })
+        let Form = $(this);
+        let errors = formValidate(Form);
+        let error = errors[0];
+        let mail = errors[1];
+        console.log(errors);
+        if(error === 0){
+            if(mail === 0){
+                Form.addClass('sending');
+                $('body').addClass('active');
+                $.ajax({
+                    type: Form.attr('method'),
+                    url: Form.attr('action'),
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+        
+                    success: function(e){
+                        $('input').val('');
+                        $('textarea').val('');
+                        alert('Спасибо! Письмо отправленно')
+                        Form.removeClass('sending');
+                        Form.removeClass('active');
+                        document.body.classList.remove("active");
+                    }
+                })
+            }else{
+                alert('В поле "Your E-mail" обезательно нужны "@" и "."')
+            }
         }else{
-            alert('В поле "Your E-mail" обезательно нужны "@" и "."')
-        }
-    }else{
-        alert('Заполните все обезательные поля')
-    };
+            alert('Заполните все обезательные поля')
+        };
+});
+formshow.submit( function(event){
+        event.preventDefault();
+        let Form = $(this);
+        let errors = formValidate(Form);
+        let error = errors[0];
+        let mail = errors[1];
+        console.log(errors);
+        if(error === 0){
+            if(mail === 0){
+                Form.addClass('sending');
+                $('body').addClass('active');
+                $.ajax({
+                    type: Form.attr('method'),
+                    url: Form.attr('action'),
+                    data: new FormData(this),
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+        
+                    success: function(e){
+                        $('input').val('');
+                        $('textarea').val('');
+                        alert('Спасибо! Письмо отправленно')
+                        Form.removeClass('sending');
+                        $('.main_form_box_show').removeClass('active');
+                        document.body.classList.remove("active");
+                    }
+                })
+            }else{
+                alert('В поле "Your E-mail" обезательно нужны "@" и "."')
+            }
+        }else{
+            alert('Заполните все обезательные поля')
+        };
 });
 
 //Проверяем заполнена ли форма
 function formValidate(form) {
     let mail = 0;
     let error = 0;
-    let formReq = document.querySelectorAll('._req');
+    let formReq = form.children('._req');
 
     for (let i = 0; i < formReq.length; i++) {
         const input = formReq[i];
@@ -181,6 +205,30 @@ h.on('mouseout', function(e){
     h.parent().css({"background-color": "#fff"});
     h.css({"color": "#000"});
 });
+
+img.on('click', function(e){
+    e.preventDefault();
+    $('body').addClass('active');
+    $('.main_form_box_show').addClass('active');
+});
+h.on('click', function(e){
+    e.preventDefault();
+    $('body').addClass('active');
+    $('.main_form_box_show').addClass('active');
+});
+
+$('.footer_container_box_social_button').on('click', function(e){
+    e.preventDefault();
+    $('body').addClass('active');
+    $('.main_form_box_show').addClass('active');
+});
+
+$('.main_form_box_show_content_img_close').on('click', function(e){
+    e.preventDefault();
+    $('body').removeClass('active');
+    $('.main_form_box_show').removeClass('active');
+});
+
 
 // Скролл на кнопках 
 $('a[href^="#"]').on("click", function () {
