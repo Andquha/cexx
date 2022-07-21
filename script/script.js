@@ -3,7 +3,7 @@ $(document).ready(function () {
       adaptiveHeight: true,
       slidesToShow: 4,
       slidestoScroll: 1,
-      speed: 3000,
+      speed: 1000,
       easing: 'ease',
       infinite: true,
       autoplay: true,
@@ -121,4 +121,33 @@ faq.on('click', function(e){
         $(this).addClass('active');
         $(this).children().addClass('active');
     }
+});
+
+// Каталог
+let h = $('.main_production_box_item_h');
+
+h.on('mouseover', function(e){
+    h.parent().css({"background-color": "#fff"});
+    h.css({"color": "#000"});
+    $(this).parent().css({"background-color": "#000"})
+    $(this).css({"color": "#fff"})
+});
+h.on('mouseout', function(e){
+    h.parent().css({"background-color": "#fff"});
+    h.css({"color": "#000"});
+});
+
+// Скролл на кнопках 
+$('a[href^="#"]').on("click", function () {
+    let href = $(this).attr("href");
+    
+    close();
+
+    $("html, body").animate({
+        scrollTop: $(href).offset().top - 30
+    }, {
+        duration: 370,   // по умолчанию «400»
+        easing: "linear" // по умолчанию «swing»
+    });
+    return false;
 });

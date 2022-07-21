@@ -64,6 +64,19 @@ body {
         display: flex;
         align-items: center;
     }
+    &_leng{
+        z-index: 13;
+        position: absolute;
+        left: 30px;
+        font-size: 12px;
+        line-height: 106%;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        &>a{
+            color: #000000;
+        }
+    }
     &_box{
         position: absolute;
         width: 100%;
@@ -94,6 +107,7 @@ body {
             z-index: 13;
             position: relative;
             cursor: pointer;
+            color: #000000;
             padding: 7px 10px;
             &_box{
                 display: none;
@@ -116,7 +130,7 @@ body {
         &_item:not(:last-child){
             margin-right: 20px;
         }
-        &_item:nth-child(2){
+        &_item:nth-child(3){
             margin-right: 215px;
         }
         &_button{
@@ -129,6 +143,18 @@ body {
         }
     }
     @media (max-width: 768px){
+        &_leng{
+            text-align: end;
+            bottom: 200px;
+            right: 50px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 106%;
+            cursor: pointer;
+            &>a{
+                color: #fff;
+            }
+        }
         &_menu{
             &_list{
                 background-color: #000000be;
@@ -1520,6 +1546,7 @@ body {
                     bottom: 5px;
                     text-align: left;
                     left: 5px;
+                    cursor: pointer;
                 }
                 &_img{
                     position: relative;
@@ -1960,7 +1987,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 &_by{
                     font-size: 14px;
                     line-height: 181%;
@@ -1990,7 +2017,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 &_button{
                     background-color: #000000;
                     color: #fff;
