@@ -328,6 +328,7 @@ body {
                 z-index: 10;
             }
             &_text{
+                width: 100px;
                 font-weight: 400;
                 font-size: 30px;
                 line-height: 106%;
@@ -746,6 +747,26 @@ body {
                             padding: 10px 38px;
                             
                         }
+                    }
+                }
+            }
+        }         
+    }
+    @media (max-width: 376px){
+        &_form{
+            &_box{
+                &_content{
+                    &_4{
+                        height: 300px;
+                        top: -300px;
+                        
+                    }
+                    &_5{
+                        height: 300px;
+                        top: -300px;
+                    }
+                    &_form{
+                        width: 245px;
                     }
                 }
             }
@@ -1488,6 +1509,49 @@ body {
             }
         }    
     }
+    @media (max-width: 376px){
+        &_trust {
+            &_box {
+                flex-direction: column;
+                &_item {
+                    flex: 1;
+                    margin-bottom: 60px;
+                    &:nth-child(2){
+                        flex: 1;
+                    }
+                    &_h{
+                        font-size: 60px;
+                    }
+                    &_info {
+                        margin-top: 10px;
+                        font-size: 15px;
+                    }
+                }
+                &_1{
+                    display: block;
+                    position: absolute;
+                    top: 23%;
+                    height: 40px;
+                    width: 2px;
+                    left: 50%;
+                    transform-origin: top left;
+                    transform: rotate(0deg);
+                    background-color: #000000;
+                }
+                &_2{
+                    display: block;
+                    position: absolute;
+                    top: 57%;
+                    height: 40px;
+                    width: 2px;
+                    left: 50%;
+                    transform-origin: top left;
+                    transform: rotate(0deg);
+                    background-color: #000000;
+                }
+            }
+        }    
+    }
     /* --TRUST----TRUST----TRUST-- */
 
     /* --PRODUCTION----PRODUCTION----PRODUCTION-- */
@@ -1700,6 +1764,19 @@ body {
                         padding: 20px;
                         width: 150px;
                         height: 150px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 376px){
+        &_production {
+            &_box{
+                &_item{
+                    &_img{
+                        padding: 20px;
+                        width: 130px;
+                        height: 130px;
                     }
                 }
             }
@@ -2006,6 +2083,7 @@ body {
             &_contacts{
                 flex: 1;
                 &_text{
+                    color: #000;
                     font-weight: 500;
                     font-size: 20px;
                     line-height: 181%;

@@ -349,6 +349,7 @@ body.active {
   z-index: 10;
 }
 .main_mainpage_info_text {
+  width: 100px;
   font-weight: 400;
   font-size: 30px;
   line-height: 106%;
@@ -737,6 +738,19 @@ body.active {
   }
   .main_form_box_content_form_button {
     padding: 10px 38px;
+  }
+}
+@media (max-width: 376px) {
+  .main_form_box_content_4 {
+    height: 300px;
+    top: -300px;
+  }
+  .main_form_box_content_5 {
+    height: 300px;
+    top: -300px;
+  }
+  .main_form_box_content_form {
+    width: 245px;
   }
 }
 @media (max-width: 1250px) {
@@ -1420,6 +1434,47 @@ body.active {
     background-color: #000000;
   }
 }
+@media (max-width: 376px) {
+  .main_trust_box {
+    flex-direction: column;
+  }
+  .main_trust_box_item {
+    flex: 1;
+    margin-bottom: 60px;
+  }
+  .main_trust_box_item:nth-child(2) {
+    flex: 1;
+  }
+  .main_trust_box_item_h {
+    font-size: 60px;
+  }
+  .main_trust_box_item_info {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .main_trust_box_1 {
+    display: block;
+    position: absolute;
+    top: 23%;
+    height: 40px;
+    width: 2px;
+    left: 50%;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    background-color: #000000;
+  }
+  .main_trust_box_2 {
+    display: block;
+    position: absolute;
+    top: 57%;
+    height: 40px;
+    width: 2px;
+    left: 50%;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    background-color: #000000;
+  }
+}
 .main_production {
   position: relative;
   display: flex;
@@ -1622,6 +1677,13 @@ body.active {
     padding: 20px;
     width: 150px;
     height: 150px;
+  }
+}
+@media (max-width: 376px) {
+  .main_production_box_item_img {
+    padding: 20px;
+    width: 130px;
+    height: 130px;
   }
 }
 .main_partners {
@@ -1917,6 +1979,7 @@ body.active {
   flex: 1;
 }
 .footer_container_box_contacts_text {
+  color: #000;
   font-weight: 500;
   font-size: 20px;
   line-height: 181%;
