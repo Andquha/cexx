@@ -8,5 +8,5 @@
     $message = wordwrap($message, 70, "\r\n");
 
     // Отправляем
-    mail('andruhaarh98@gmail.com', 'Заявка', $message, 'Reply-To:'.$email.'');
+    mail('shveiniycehh@gmail.com', 'Заявка', $message, 'Reply-To:'.$email.'');
 ?>

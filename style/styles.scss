@@ -302,6 +302,24 @@ body {
     &_container{
         position: relative;
         width: 100%;
+        &_arrow{
+            display: none;
+            position: fixed;
+            z-index: 20;
+            right: 40px;
+            bottom: 40px;
+            cursor: pointer;
+            &.fixed{
+                display: block;
+            }
+        }
+        @media (max-width: 768px){
+            &_arrow{
+                right: 10px;
+                bottom: 40px;
+                width: 30px;
+            } 
+        }
     }
     /* --MAINPAGE----MAINPAGE----MAINPAGE-- */
     &_mainpage{

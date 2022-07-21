@@ -25,8 +25,7 @@
         2. Validate email
         3. If all done send mail :
             1.Send mail in main, no spam
-        4. Loading page
-        5. Sacsessful page
+        4. Sacsessful page
     3.Adaptive
 
 5.Create "Advantage Page" :
@@ -87,8 +86,7 @@
         2. Validate email
         3. If all done send mail :
             1.Send mail in main, no spam
-        4. Loading page
-        5. Sacsessful page
+        4. Sacsessful page
     3. Adaptive
 
 13.Create Favicon
@@ -108,3 +106,5 @@
 19.Use:
     1: Looking for mistakes
     2: Correcting
+
+20.Scroll to top

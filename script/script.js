@@ -244,3 +244,25 @@ $('a[href^="#"]').on("click", function () {
     });
     return false;
 });
+
+$(function () {
+    $arrow = $('.main_container_arrow');
+    $window = $(window);
+    $h = 600;
+    $window.scroll(function () {
+      if ($window.scrollTop() > $h) {
+        $arrow.addClass('fixed');
+      } else {
+        $arrow.removeClass('fixed');
+      }
+    });
+});
+
+$('.main_container_arrow').on('click', function(){
+  $("html, body").animate({
+      scrollTop: $('html').offset().top
+  }, {
+      duration: 370,   // по умолчанию «400»
+      easing: "linear" // по умолчанию «swing»
+  });
+})
