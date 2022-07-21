@@ -756,17 +756,19 @@ body {
         &_form{
             &_box{
                 &_content{
+                    &_3{
+                        display: none;
+                    }
                     &_4{
-                        height: 300px;
+                        height: 200px;
                         top: -300px;
-                        
                     }
                     &_5{
                         height: 300px;
                         top: -300px;
                     }
                     &_form{
-                        width: 245px;
+                        width: 225px;
                     }
                 }
             }
@@ -928,10 +930,6 @@ body {
             &_box {
                 &_img{
                     display: none;
-                    & > img{
-                        width: 100%;
-                        transform: translate(30px, -35px);
-                    }
                 }
                 &_content{
                     flex: 0 1 100%;
@@ -951,19 +949,19 @@ body {
                         position: relative;
                         display: flex;
                         align-items: center;
+                        border: #000000 2px solid;
+                        margin-top: 55px;
+                        margin-right: 33px;
                     }
                     &_slider{
+                        transform: translate(35px, -35px);
                         &_slide{
-                            border: #000000 2px solid;
-                            margin-top: 25px;
-                            margin-right: 33px;
                             & > img {
                                 width: 100%;
-                                transform: translate(30px, -35px);
                             }
                         }
                         &_arrows{
-                            width: 50%;
+                            width: 70%;
                             top: 105%;
                         }
                         &_back{
@@ -1456,6 +1454,8 @@ body {
                         flex: 2;
                     }
                     &_h {
+                        -webkit-text-fill-color: black;
+                        color: #000;
                         font-size:80px;
                     }
                 }
@@ -1625,6 +1625,7 @@ body {
                     align-items: center;
                     padding: 10%;
                     transform: translate(36px, -36px);
+                    cursor: pointer;
                     &>img{
                        width: 100%;
                     }
@@ -2024,6 +2025,11 @@ body {
     }
     /* --FAQ----FAQ----FAQ-- */
 }
+@media (max-width: 768px){
+    .main{
+        padding: 0px 20px;
+    }       
+}
 
 /* --FOOTER----FOOTER----FOOTER-- */
 .footer {
@@ -2088,6 +2094,9 @@ body {
                     font-size: 20px;
                     line-height: 181%;
                     text-align: right;
+                    &>a{
+                        color: #000;
+                    }
                 }
             }
             &_social{

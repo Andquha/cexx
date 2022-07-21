@@ -157,7 +157,19 @@ faq.on('click', function(e){
 });
 
 // Каталог
-let h = $('.main_production_box_item_h');
+const img = $('.main_production_box_item_img')
+const h = $('.main_production_box_item_h');
+
+img.on('mouseover', function(e){
+    img.parent().css({"background-color": "#fff"});
+    h.css({"color": "#000"});
+    $(this).parent().css({"background-color": "#000"})
+    $(this).siblings('.main_production_box_item_h').css({"color": "#fff"})
+});
+img.on('mouseout', function(e){
+    img.parent().css({"background-color": "#fff"});
+    h.css({"color": "#000"});
+});
 
 h.on('mouseover', function(e){
     h.parent().css({"background-color": "#fff"});

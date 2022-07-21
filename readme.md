@@ -10,8 +10,8 @@
     6. Adaptive
 
 2.Create "Main Page" :
-    2. Lines
-    1. Adaptive
+    1. Lines
+    2. Adaptive
 
 3.Create "Steps Page" :
     1. Lines
