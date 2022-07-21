@@ -24,15 +24,48 @@ $(document).ready(function () {
 
 
 
+// const PageForm = $('.main_form_box_content_form');
+// // const close = $('');
+
+// function open(e) {
+//   e.preventDefault();
+//   PageForm.addClass('active');
+//   $('body').addClass('active');
+// }
+// function close(e) {
+//     e.preventDefault();
+//     PageForm.removeClass('active');
+//     $('body').removeClass('active');
+// }
+
 $('.main_form_box_content_form').submit(function(event){
     event.preventDefault();
+    let Form = $(this);
     let errors = formValidate($(this));
     let error = errors[0];
     let mail = errors[1];
     console.log(errors);
     if(error === 0){
         if(mail === 0){
-
+            Form.addClass('sending');
+            $('body').addClass('active');
+            $.ajax({
+                type: $(this).attr('method'),
+                url: $(this).attr('action'),
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
+    
+                success: function(e){
+                    $('input').val('');
+                    $('textarea').val('');
+                    alert('Спасибо! Письмо отправленно')
+                    Form.removeClass('sending');
+                    Form.removeClass('active');
+                    document.body.classList.remove("active");
+                }
+            })
         }else{
             alert('В поле "Your E-mail" обезательно нужны "@" и "."')
         }
@@ -140,7 +173,7 @@ h.on('mouseout', function(e){
 // Скролл на кнопках 
 $('a[href^="#"]').on("click", function () {
     let href = $(this).attr("href");
-    
+
     close();
 
     $("html, body").animate({
