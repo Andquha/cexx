@@ -119,6 +119,7 @@ body.active {
   display: none;
 }
 .header_menu_item:hover {
+  padding: 5px 8px;
   border: #000000 2px solid;
 }
 .header_menu_item:hover::before {

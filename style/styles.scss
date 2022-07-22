@@ -114,6 +114,7 @@ body {
             }
         }
         &_item:hover{
+            padding: 5px 8px;
             border: #000000 2px solid;
             &::before{
                 content: "";
