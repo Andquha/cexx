@@ -184,26 +184,41 @@ faq.on('click', function(e){
 const img = $('.main_production_box_item_img')
 const h = $('.main_production_box_item_h');
 
+let text = "";
 img.on('mouseover', function(e){
     img.parent().css({"background-color": "#fff"});
     h.css({"color": "#000"});
     $(this).parent().css({"background-color": "#000"})
     $(this).siblings('.main_production_box_item_h').css({"color": "#fff"})
+    text = $(this).siblings('.main_production_box_item_h').html();
+    if(document.location.href == "https://cehh.com.ua/ru"){
+        $(this).siblings('.main_production_box_item_h').html('Заказать');
+    }else{
+        $(this).siblings('.main_production_box_item_h').html('Замовити');
+    }
 });
 img.on('mouseout', function(e){
     img.parent().css({"background-color": "#fff"});
     h.css({"color": "#000"});
+    $(this).siblings('.main_production_box_item_h').html(text);
 });
 
 h.on('mouseover', function(e){
+    text = $(this).html();
     h.parent().css({"background-color": "#fff"});
     h.css({"color": "#000"});
     $(this).parent().css({"background-color": "#000"})
     $(this).css({"color": "#fff"})
+    if(document.location.href == "https://cehh.com.ua/ru"){
+        $(this).html('Заказать');
+    }else{
+        $(this).html('Замовити');
+    }
 });
 h.on('mouseout', function(e){
     h.parent().css({"background-color": "#fff"});
     h.css({"color": "#000"});
+    $(this).html(text);
 });
 
 img.on('click', function(e){
